@@ -1,25 +1,36 @@
-
- 
-.bg-image{
+/* style.css */
+/* .bg-image {
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-} 
-
-.nav-link{
+  } */
+  
+  .nav-link {
     color: #ffffff !important;
     font-family: 'Lato', sans-serif !important;
     font-weight: bold !important;
-}
-
-.navbar{
+  }
+  
+  .navbar {
     transition: all 0.6s;
-}
-
-.navbar-scrolled{
+  }
+  
+  .navbar-scrolled {
     background-color: #ffffff;
     box-shadow: 0.3px 10px #ffffff;
-    
-}
+  }
+  
+  .navbar-color-change{
+    color: #414f6b !important;
+  }
+
+  .logo2{
+    display: none;
+  }
+
+  .bg{
+    background-image: url(../img/Bg.png) !important;
+  }
+  
