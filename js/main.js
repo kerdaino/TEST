@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const logo1 = document.getElementById('logo1');  // Logo 1 element
   const logo2 = document.getElementById('logo2');  // Logo 2 element
   const navbarNav = document.querySelector('.navbar');  // Navbar element (again)
+  const mountain1Content = document.querySelector('.mountain1-content');
+  const mountain2Content = document.querySelector('.mountain2-content');
+  const mountain1Nav = document.querySelector('.mountain1 a');
+  const mountain2Nav = document.querySelector('.mountain2 a');
+
 
   // Function to update navbar color on scroll
   function updateNavbarColor() {
@@ -65,4 +70,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Listen for resize event and call removeAccordionToggle function
   window.addEventListener('resize', removeAccordionToggle);
+
+  function hideAllContent() {
+    mountain1Content.style.display = 'none';
+    mountain2Content.style.display = 'none';
+  }
+  
+  function showMountain1Content() {
+    hideAllContent();
+    mountain1Content.style.display = 'block';
+    // mountain1Nav.classList.add('active');
+    // mountain2Nav.classList.remove('active');
+    mountain1Nav.parentElement.classList.add('active');
+    mountain2Nav.parentElement.classList.remove('active');
+  }
+  
+  function showMountain2Content() {
+    hideAllContent();
+    mountain2Content.style.display = 'block';
+    mountain2Nav.parentElement.classList.add('active');
+    mountain1Nav.parentElement.classList.remove('active');
+  }
+  
+  mountain1Nav.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    showMountain1Content();
+  });
+
+  mountain2Nav.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    showMountain2Content();
+  });
 });
+

@@ -31,20 +31,20 @@
       <!-- Container fluid for navbar content -->
       <div class="container-fluid">
         <!-- Navbar brand with logo images -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#top">
           <!-- Company logo 1 -->
           <img src="img/Logo.png" alt="company-logo" class="logo1" id="logo1">
           <!-- Company logo 2 -->
           <img src="img/Logo2.png" alt="logo2" class="logo2" id="logo2">
         </a>
         <!-- Navbar navigation links with margin and text styles -->
-        <div class="navbar-nav ms-auto nav-underline">
+        <div class="navbar-nav ms-auto nav-underline navbar-color-change">
           <!-- First navigation link with active class -->
-          <a class="nav-link text-uppercase active" aria-current="page" href="#">
+          <a class="nav-link text-uppercase active" aria-current="page" href="#history">
             <p>01.history</p>
           </a>
           <!-- Second navigation link -->
-          <a class="nav-link text-uppercase active" href="#">
+          <a class="nav-link text-uppercase active" href="#team">
             <p>02.team</p>
           </a>
         </div>
@@ -54,8 +54,10 @@
 
   <!-- Main content section -->
   <main>
+
+    <section id="history">
     <!-- Accordion element with unique ID -->
-    <div class="accordion" id="accordionExample">
+    <div class="accordion history" id="accordionExample">
       <!-- Accordion item 1 -->
       <div class="accordion-item">
         <!-- Accordion header with a button to toggle the collapse -->
@@ -88,7 +90,6 @@
 
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" class="active"
                   aria-current="true" aria-label="Slide 4"></button>
-
               </div>
               <!-- Carousel inner content -->
               <div class="carousel-inner">
@@ -98,20 +99,19 @@
                   <img src="img/man-on-hill.png" class="d-block w-100 h-100" alt="hiker">
                 </div>
                 <!-- ... Repeat for other carousel items ... -->
-
-                <!-- Carousel item 1 with active class -->
+                <!-- Carousel item 2 with active class -->
                 <div class="carousel-item active">
                   <!-- Image for the carousel -->
                   <img src="img/mountain.png" class="d-block w-100 h-100" alt="hiker">
                 </div>
 
-                <!-- Carousel item 1 with active class -->
+                <!-- Carousel item 3 with active class -->
                 <div class="carousel-item active">
                   <!-- Image for the carousel -->
                   <img src="img/man-on-hill.png" class="d-block w-100 h-100" alt="hiker">
                 </div>
 
-                <!-- Carousel item 1 with active class -->
+                <!-- Carousel item 4 with active class -->
                 <div class="carousel-item active">
                   <!-- Image for the carousel -->
                   <img src="img/mountain.png" class="d-block w-100 h-100" alt="hiker">
@@ -138,9 +138,10 @@
           </div>
         </div>
       </div>
+    </section>
 
       <!-- ... Repeat for other accordion items ... -->
-
+    <section id="team">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -149,8 +150,7 @@
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <!-- <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+          <div class="accordion-body wrapper">
             <div class="full-width">
               <div class="half-width">
                 <img src="img/02.png" alt="02-image">
@@ -161,56 +161,52 @@
               </div>
             </div>
 
-            <nav>
-              <div class="navbar-nav  mountain-nav ">
-                <!-- First navigation link with active class -->
-                <a class=" text-uppercase active" aria-current="page" href="#">
-                  <p>mountain 1</p>
-                </a>
-                <!-- Second navigation link -->
-                <a class=" text-uppercase active" href="#">
-                  <p>mountain 2</p>
-                </a>
+            <nav class="mountain-nav">
+              <div class="mountain1">
+                <a href="#"><p>mountain 1</p></a>
+              </div>
+              <div class="mountain2">
+                <a href="#"><p>mountain 2</p></a>
               </div>
             </nav>
 
-            <div class="mountain1">
-              <div class="schedule">
-                <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col" colspan="2">Schedule</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>25 Nov 2016</td>
-                    <td>Vestibulum viverra</td>
-                  </tr>
-                  <tr>
-                    <td>28 Nov 2016</td>
-                    <td>Vestibulum viverra</td>
-                  </tr>
-                  <tr>
-                    <td>18 Dec 2016</td>
-                    <td>Vestibulum viverra</td>
-                  </tr>
-                  <tr>
-                    <td>7 Jan 2017</td>
-                    <td>Vestibulum viverra</td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              </div>
-            </div>
-
-            <div class="mountain2">
+            <div class="mountain1-content">
               <div class="schedule">
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col" colspan="2">Schedule</th>
+                      <th scope="col" colspan="2"><p>Schedule</p></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>25 Nov 2016</td>
+                      <td>Vestibulum viverra</td>
+                    </tr>
+                    <!-- ... Repeat for other rows ... -->
+                    <tr>
+                      <td>28 Nov 2016</td>
+                      <td>Vestibulum viverra</td>
+                    </tr>
+                    <tr>
+                      <td>18 Dec 2016</td>
+                      <td>Vestibulum viverra</td>
+                    </tr>
+                    <tr>
+                      <td>7 Jan 2017</td>
+                      <td>Vestibulum viverra</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="mountain2-content">
+              <div class="schedule">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="2"><p>Schedule</p></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -218,6 +214,7 @@
                       <td>17 Nov 2016</td>
                       <td>Vestibulum viverra</td>
                     </tr>
+                    <!-- ... Repeat for other rows ... -->
                     <tr>
                       <td>13 Dec 2016</td>
                       <td>Vestibulum viverra</td>
@@ -238,7 +235,7 @@
           </div>
         </div>
       </div>
-
+    </section>
     </div>
   </main>
 
